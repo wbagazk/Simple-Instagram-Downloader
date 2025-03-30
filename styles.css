@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
     color: #333;
     display: flex;
     justify-content: center;
@@ -170,4 +170,39 @@ a.download-btn:hover {
     background: linear-gradient(135deg, #feb47b, #ff7e5f);
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(255, 126, 95, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.nav-item {
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #2575fc;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
 }
