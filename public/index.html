@@ -75,6 +75,11 @@
                     <span>Download Video</span>
                 </button>
             </div>
+            <div id="videoMetadata" class="mt-4 text-center text-gray-600 dark:text-gray-300">
+                <p id="videoCaption" class="font-semibold"></p>
+                <p>Diunggah oleh <span id="videoUsername" class="font-bold"></span></p>
+                <p>❤️ <span id="videoLikes"></span> 💬 <span id="videoComments"></span></p>
+            </div>
         </div>
     </main>
 
@@ -222,8 +227,10 @@
                 type: 'GET',
                 data: { url: videoUrl },
                 success: function(data) {
+
                     const videoLink = data.result.url[0];
-                    
+                    const metadata = data.result.metadata;
+
                     if (videoLink) {
                         resultDiv.innerHTML = `
                             <div class="flex flex-col items-center">
@@ -236,6 +243,11 @@
                                         <i class="fas fa-download text-sm"></i>
                                         <span>Download Video</span>
                                     </button>
+                                </div>
+                                <div id="videoMetadata" class="mt-4 text-center text-gray-600 dark:text-gray-300">
+                                    <p id="videoCaption" class="font-semibold">${metadata.caption}</p>
+                                    <p>Diunggah oleh <span id="videoUsername" class="font-bold">${metadata.username}</span></p>
+                                    <p>❤️ <span id="videoLikes">${metadata.like}</span> 💬 <span id="videoComments">${metadata.comment}</span></p>
                                 </div>
                             </div>
                         `;
