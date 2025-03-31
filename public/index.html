@@ -69,20 +69,20 @@
                 <source id="videoSource" type="video/mp4">
                 Browser Anda tidak mendukung pemutaran video.
             </video>
-            <div id="videoMetadata" class="max-w-3xl mx-auto mt-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 space-y-6">
-                <p id="videoCaption" class="font-semibold text-lg mb-2">${metadata.caption}</p>
-                <p class="text-sm">
+            <div id="videoMetadata" class="max-w-3xl mx-auto mt-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 space-y-6 flex flex-col items-center">
+                <p id="videoCaption" class="font-semibold text-lg mb-2 text-white text-center">${metadata.caption}</p>
+                <p class="text-sm text-center">
                     <span class="font-bold text-gray-800 dark:text-white">Diunggah oleh:</span> 
                     <span id="videoUsername" class="font-bold text-blue-500 hover:underline cursor-pointer">${metadata.username}</span>
                 </p>
                 <div class="flex justify-center items-center space-x-4 mt-2">
                     <div class="flex items-center">
                         <i class="fas fa-heart text-red-500"></i>
-                        <span id="videoLikes" class="ml-1 font-semibold">${metadata.like}</span>
+                        <span id="videoLikes" class="ml-1 font-semibold text-white">${metadata.like}</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-comment text-blue-500"></i>
-                        <span id="videoComments" class="ml-1 font-semibold">${metadata.comment}</span>
+                        <span id="videoComments" class="ml-1 font-semibold text-white">${metadata.comment}</span>
                     </div>
                 </div>
             </div>
@@ -250,20 +250,20 @@
                                     <source src="${videoLink}" type="video/mp4">
                                     Browser Anda tidak mendukung pemutaran video.
                                 </video>
-                                <div id="videoMetadata" class="max-w-3xl mx-auto mt-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 space-y-6">
-                                    <p id="videoCaption" class="font-semibold text-lg mb-2">${metadata.caption}</p>
-                                    <p class="text-sm">
+                                <div id="videoMetadata" class="max-w-3xl mx-auto mt-10 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-6 md:p-8 space-y-6 flex flex-col items-center">
+                                    <p id="videoCaption" class="font-semibold text-lg mb-2 text-white text-center">${metadata.caption}</p>
+                                    <p class="text-sm text-center">
                                         <span class="font-bold text-gray-800 dark:text-white">Diunggah oleh:</span> 
                                         <span id="videoUsername" class="font-bold text-blue-500 hover:underline cursor-pointer">${metadata.username}</span>
                                     </p>
                                     <div class="flex justify-center items-center space-x-4 mt-2">
                                         <div class="flex items-center">
                                             <i class="fas fa-heart text-red-500"></i>
-                                            <span id="videoLikes" class="ml-1 font-semibold">${metadata.like}</span>
+                                            <span id="videoLikes" class="ml-1 font-semibold text-white">${metadata.like}</span>
                                         </div>
                                         <div class="flex items-center">
                                             <i class="fas fa-comment text-blue-500"></i>
-                                            <span id="videoComments" class="ml-1 font-semibold">${metadata.comment}</span>
+                                            <span id="videoComments" class="ml-1 font-semibold text-white">${metadata.comment}</span>
                                         </div>
                                     </div>
                                 </div>
