@@ -222,20 +222,9 @@
                 type: 'GET',
                 data: { url: videoUrl },
                 success: function(data) {
-                    let videoLink = '';
-                    let musicLink = '';
+                    const videoLink = data.result.url[0];
                     
-                    const downloadLinks = data.download_links;
-                    const videoQuality = downloadLinks.find(link => link.quality === 'hd');
-
-                    if (videoQuality) {
-                        videoLink = videoQuality.url; 
-                    }
-                    if (audioQuality) {
-                        musicLink = audioQuality.url; 
-                    }
-
-                    if (videoLink || musicLink) {
+                    if (videoLink) {
                         resultDiv.innerHTML = `
                             <div class="flex flex-col items-center">
                                 <video id="smallVideo" controls class="w-full h-auto rounded-lg mb-4">
@@ -243,7 +232,7 @@
                                     Browser Anda tidak mendukung pemutaran video.
                                 </video>
                                 <div class="download-buttons grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <button onclick="downloadFile('${videoLink}')" class="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 active:from-purple-700 active:to-pink-800 text-white py-4 px-6 rounded-2xl transition-all duration-300 flex items-center justify-center space-x-3 font-semibold shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-500/50 focus:ring-offset-2 dark:ring-offset-gray-800">
+                                    <button onclick="window.location.href='${videoLink}'" class="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 active:from-purple-700 active:to-pink-800 text-white py-4 px-6 rounded-2xl transition-all duration-300 flex items-center justify-center space-x-3 font-semibold shadow-md hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-500/50 focus:ring-offset-2 dark:ring-offset-gray-800">
                                         <i class="fas fa-download text-sm"></i>
                                         <span>Download Video</span>
                                     </button>
